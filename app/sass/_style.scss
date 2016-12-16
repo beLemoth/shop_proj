@@ -1,0 +1,500 @@
+@import 'settings';
+
+/* fonts */
+$main-font: 'Montserrat', sans-serif;
+
+/* colors */
+$black-color: #000000;
+$white-color: #ffffff;
+$dark-text: #333333;
+$white-text: #ffffff;
+$grey-text: #444444;
+$light-grey-text: #616161;
+$gold-text: #dbbe81;
+$item-text: #2c2c2c;
+$blog-light-text: #747474;
+
+body {
+    font-family: $main-font;
+    overflow-x: hidden;
+}
+
+* {
+    margin: 0; padding: 0;
+}
+
+// preloader
+.preloader {}
+
+/* buttons */
+.button {
+    text-decoration: none; background-color: $black-color;
+    display: inline-block; width: 130px; height: 50px; margin: 0 auto;
+    @include font-type($white-color, $main-font, 14px, 50px, 0);
+    text-align: center;
+
+
+    &:hover {
+        text-decoration: none;
+    }
+
+    &:active {
+        
+    }
+
+    &:after {
+
+    }
+}
+
+// main sections ------------------------------------------
+
+// application
+.app {
+
+    // header
+    header.header {
+        background: url('../img/header-bg.jpg') top center no-repeat #000;
+        background-size: contain;
+        
+        height: 2200px; padding: 0 60px;
+    }
+
+    // footer
+    footer.footer {
+        background-color: #f3f3f3; text-align: center; padding-top: 110px;
+        position: relative; height: 505px;
+    }
+
+    section.intro {
+    }
+
+    section.feature-product {
+        position: relative;
+        h2 {
+            &:before {
+                content: 'Feature product';
+            } 
+        }
+    }
+
+    section.special-product {
+        height: 1416px; padding-bottom: 95px;
+        h2 {
+            &:before {
+                content: 'Special product';
+            } 
+        }
+    }
+
+    section.blog {
+        h2 {
+            &:before {
+                content: 'Lester blog';
+            } 
+        }
+    }
+
+    h1 {
+        text-transform: uppercase;
+        margin: 10px;
+        font-size: 55px; 
+    }
+
+    h2 {
+        text-align: center; text-transform: uppercase; font-weight: 700;
+        @include font-type($dark-text, $main-font, 20px, 100px, 0);
+        position: relative; margin-bottom: 80px;
+
+        &:before {
+            position: absolute; bottom: 0; display: block; left: 50%;
+            transform: translateX(-50%); width: 100%;
+            font-size: 80px; opacity: 0.1;
+        }
+
+        &:after {
+            content: ' ';
+            border: 1px solid $dark-text; width: 60px;
+            position: absolute; bottom: 0; left: 50%;
+            transform: translateX(-50%);
+        }
+
+    }
+
+    h3 {
+        @include font-type($dark-text, $main-font, 50px, 60px, 0);
+    }
+
+    // header styles -------------------------------------------------
+
+    .upper-header {
+        
+        height: 1160px; position: relative;
+
+        .contact {
+            
+            height: 100px; margin-bottom: 300px;
+
+            ul.header-upper-nav {
+                float: right;
+                 li {
+                    display: inline-block;
+                    color: $white-text; line-height: 100px;
+                    margin-right: 20px; 
+
+                    &:last-child {
+                        margin-right: 0;
+                    }   
+
+                    a {
+                        color: $white-text;
+                    }
+
+                 }
+
+                 &:after {
+                    display: block; content: ''; clear: both;
+                 }
+
+            }
+        }
+    }
+
+    .header-logo {
+        
+        color: $white-text;
+        margin-bottom: 380px; margin-left: 740px;
+        text-align: center; position: relative;
+
+        img {
+            width: 130px; height: 130px;
+        }
+
+        p {
+            font-size: 24px; line-height: 55px; position: relative;
+
+            i {
+                display: inline-block; position: absolute; top: 50%;
+
+                &.left {
+                    left: 200px;
+                }
+
+                &.right {
+                    right: 200px;
+                }
+            }
+        }
+
+        small {
+            font-size: 16px;
+        }
+
+        &:after {
+            content: " "; display: block; clear: both;
+        }
+    }
+
+    #main-header {
+        background-color: #fff;
+        padding: 10px 60px; height: 1140px;
+
+        .main-header-top {
+            height: 64px; margin-bottom: 300px;
+            a.icon-header-logo-mini {
+                display: block; float: left;
+            }
+
+            ul {
+                float: right;
+                li {
+                    display: inline-block; margin-right: 36px;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                    a {
+                        display: block; text-decoration: none; text-transform: uppercase;
+                        @include font-type($grey-text, $main-font, 14px, 64px, 0)
+                        font-weight: 700;
+                    }
+                }
+            }
+        
+            nav.header-nav {
+                ul {
+                    margin-right: 250px;
+                }
+            }
+
+            ul.side-icons {
+                li {
+                    margin-right: 10px;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+         
+    }
+
+    a.icon-header-scroll {
+            display: block;
+            position: absolute; bottom: 15px; left: 50%; margin-left: -15px;
+        }
+
+    // intro section styles -----------------------------------------------
+
+    .new-prod,
+    .sale { 
+        text-align: center; padding-top: 5%;
+        p {
+            @include font-type($dark-text, $main-font, 16px, 30px, 0);
+            padding: 0 20%; margin-bottom: 30px;
+        }
+
+        span {
+            display: block;
+            }
+
+        h3 {
+            margin-bottom: 30px; margin-top: 0;
+        }
+    }
+
+    .new-prod {
+        h3 {
+            position: relative; 
+            &:after {
+                position: absolute; bottom: -20px;
+                display: block; width: 100%;
+                content: 'open lookbook';
+                @include font-type($light-grey-text, $main-font, 16px, 30px, 0);
+            }
+        }
+    }
+
+    .new-prod-img,
+    .sale-img {
+        margin-bottom: 100px;
+    }
+
+    // feature-product section styles -------------------------------
+
+    .product-detail {
+
+        padding-right: 210px;
+        
+        p {
+            @include font-type($dark-text, $main-font, 16px, 45px, 0);
+        }
+
+        h4 {
+            @include font-type($dark-text, $main-font, 35px, 45px, 0);
+            font-weight: 700;
+        }
+
+        #product-type {
+            text-transform: uppercase;
+            margin-bottom: 0;
+        }
+
+        #product-price {
+            span {
+                color: $gold-text; font-size: 25px;
+            }
+        }
+
+        #product-desc {
+            font-size: 14px; line-height: 30px; margin-bottom: 40px;
+        }
+
+        a.button {
+            margin-right: 30px;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .product-img {
+        width: 50%; height: auto; position: absolute; top: 50%; right: 0;
+        transform: translateY(-37%);
+    }
+
+    .product-preview {
+        position: absolute; top: 50%; left: 50%;
+        margin-left: -200px; margin-top: -110px; 
+        background: url('../img/product-rectangle.png') center no-repeat;
+        background-size: contain;
+        img {
+            display: inline-block; width: 400px; height: 400px;
+        }
+    }
+
+    // special product section styles --------------------------------
+
+    .shop-item {
+        position: relative; margin-bottom: 170px;
+        img {
+            width: 100%; margin-bottom: 28px; 
+        }
+        .item-footer {
+            height: 68px; width: 100%; background-color: #fff;
+            position: absolute; bottom: 77px;
+            display: none;
+            ul {
+                height: 100%; padding: 20px 0;
+                li {
+                    display: inline-block; height: 28px;
+                    text-align: center; line-height: 28px;
+                    border-right: 1px solid $grey-text;
+
+                    &:last-child {
+                        border: 0;
+                    }
+                    a {
+                        color: $grey-text; display: inline-block;
+                        width: 100%; height: 100%;
+                    }
+                }
+            }
+        }
+        .item-detail-left {
+            float: left;
+        }
+        .item-detail-right {
+            float: right;
+            p {
+                text-align: right;
+            }
+        }
+
+        p {
+            @include font-type($item-text, $main-font, 18px, 30px, 0);
+            span {
+                color: $gold-text; font-weight: 700;
+            }
+        }
+    }
+    
+    .hot-sales {
+        height: 516px;
+        img {
+            float: right; position: relative;
+        }
+        h3 {
+            @include font-type($dark-text, $main-font, 100px, 55px, 0);
+            font-weight: 700; 
+        }
+        p {
+            @include font-type($dark-text, $main-font, 39px, 84px, 0);
+        }
+        
+        .hot-sale-top,
+        .hot-sale-bottom, 
+        a {
+            position: absolute; 
+        }
+
+        .hot-sale-top {
+            text-align: right; width: 620px;
+            right: 770px; top: 120px;
+        }
+        .hot-sale-bottom {
+            right: 160px; top: 190px;
+        }
+        a {
+            right: 130px; top: 385px;
+        }
+    }
+
+    // blog section styles -----------------------------------------
+
+    .blog-post {
+        margin-bottom: 38px;
+        .post-img {
+            position: relative;
+        }
+        .date {
+            position: absolute; top: 0; left: 15px;
+            width: 80px; height: 70px; background-color: $dark-text; text-align: center;
+            span {
+                color: $white-text;;
+                &#day {
+                    font-size: 38px; font-weight: 700; line-height: 46px;
+                }
+                &#month {
+                    font-size: 18px; line-height: 15px;
+                }
+            }
+
+            &:before {
+                width: 100%; height: 100%; content: '';
+                border: 2px solid $dark-text;
+                position: absolute; right: 10px; bottom: 10px;
+                z-index: -100;
+            }
+        }
+        .post-desc {
+            h4 {
+                @include font-type($dark-text, $main-font, 20px, 30px, 0);
+                font-weight: 700;
+            }
+            p {
+                @include font-type($blog-light-text, $main-font, 14px, 30px, 0);
+            }
+            a {
+                @include font-type($dark-text, $main-font, 14px, 30px, 0);
+                font-weight: 700; text-decoration: none; float: right; position: relative;
+                &:before {
+                    content: ' '; border: 1px solid $dark-text;
+                    width: 40px; height: 0px; position: absolute; top: 50%; left: -50px;
+                }
+            }
+        }
+    }
+
+    // footer styles --------------------------------------------------
+
+    .footer-main {
+
+        max-width: 630px;
+        margin: 0 auto;
+        .icon-header-logo-mini {
+            margin: 0 auto 32px auto;
+        }
+        p {
+            @include font-type($dark-text, $main-font, 14px, 30px, 0);
+            margin-bottom: 65px;
+        }
+        ul {
+            li {
+                display: inline-block; width: 30px; height: 30px;
+                border: 1px solid $dark-text; margin-right: 15px;
+                &:last-child {
+                    margin-right: 0;
+                }
+                a {
+                    color: $dark-text; line-height: 30px; display: block;
+                }
+            }
+        }
+    }
+
+    .footer-bottom  {
+        position: absolute; bottom: 0; left: 0; right: 0;
+        height: 60px; background-color: #e5e5e5;
+        small {
+            @include font-type($dark-text, $main-font, 13px, 60px, 0);
+        }
+    }
+
+    // RESPONSIVE - Bootstrap sizes
+    @include respond-to(desktop) {background: none; };
+    @include respond-to(lg) { background: orange; };
+    @include respond-to(md) { background: green; };
+    @include respond-to(sm) { background: blue; };
+    @include respond-to(xs) { background: black; };
+    @include respond-to(mobile) { background: red; };
+}
